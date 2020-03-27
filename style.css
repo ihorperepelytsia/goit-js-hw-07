@@ -1,0 +1,33 @@
+#gallery {
+    display: flex;
+    list-style: none;
+}
+
+#gallery li {
+    margin: 15px;
+}
+
+.tasks {
+    font-size: 40px;
+    padding: 25px;
+    color: skyblue;
+}
+
+#validation-input {
+    border: 3px solid #bdbdbd;
+}
+
+#validation-input.valid {
+    border-color: #4caf50;
+}
+
+#validation-input.invalid {
+    border-color: #f44336;
+}
+
+#boxes {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px;
+}
+
