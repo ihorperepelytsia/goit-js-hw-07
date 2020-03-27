@@ -9,7 +9,7 @@ function inputChek(event) {
     return;
   }
   input.classList.remove("valid");
-  input.classList.toggle("invalid");
+  input.classList.add("invalid");
 }
 
 input.addEventListener("blur", inputChek);
