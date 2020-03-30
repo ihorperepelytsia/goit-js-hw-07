@@ -3,15 +3,13 @@
 let counterValue = 0;
 
 const value = document.querySelector("#value");
-const increment = function() {
-  counterValue += 1;
-  value.textContent = counterValue;
-};
+function increment() {
+  value.textContent = counterValue += 1;
+}
 
-const decrement = function() {
-  counterValue -= 1;
-  value.textContent = counterValue;
-};
+function decrement() {
+  value.textContent = counterValue -= 1;
+}
 
 document
   .querySelector('button[data-action="increment"]')

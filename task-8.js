@@ -13,20 +13,20 @@ function randomInteger(min, max) {
 }
 
 function createBoxes(amount) {
+  let result = [];
   for (let i = 0; i < +amount; i++) {
-    const div = document.createElement("div");
+    let div = document.createElement("div");
     div.style = `margin-right: 5px;
     height: ${size}px;
     width: ${size}px;
     background-color: rgb(${randomInteger(1, 256)},${randomInteger(1,256)},${randomInteger(1, 256)})`;
-    box.append(div);
     size += 10;
+    result.push(div);
   }
+  box.append(...result)
 }
 
-createButton.addEventListener("click", function() {
-  createBoxes(input.value);
-});
+createButton.addEventListener("click", () => createBoxes(input.value));
 
 function destroyBoxes() {
   size = 25;
@@ -36,3 +36,19 @@ function destroyBoxes() {
 }
 
 clearButton.addEventListener("click", destroyBoxes);
+
+
+
+
+
+// / function getListContent() {
+  //   let result = [];
+  //   for(let i=1; i<=3; i++) {
+  //     let li = document.createElement('li');
+  //     li.append(i);
+  //     result.push(li);
+  //   }
+  
+  //   return result;
+  // }
+  // ul.append(...getListContent())
